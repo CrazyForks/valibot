@@ -4,6 +4,7 @@ import type {
   ErrorMessage,
 } from '../../types/index.ts';
 import { _addIssue } from '../../utils/index.ts';
+import { _isIsbn10, _isIsbn13 } from './utils/index.ts';
 
 /**
  * ISBN issue interface.
@@ -16,7 +17,7 @@ export interface IsbnIssue<TInput extends string> extends BaseIssue<TInput> {
   /**
    * The issue type.
    */
-  readonly type: 'ISBN';
+  readonly type: 'isbn';
   /**
    * The expected property.
    */
@@ -41,7 +42,7 @@ export interface IsbnAction<
   /**
    * The action type.
    */
-  readonly type: 'ISBN';
+  readonly type: 'isbn';
   /**
    * The action reference.
    */
@@ -61,9 +62,19 @@ export interface IsbnAction<
 }
 
 /**
+ * ISBN-10 regex.
+ */
+const ISBN_10_REGEX = /^\d{9}[\dX]$/u;
+
+/**
+ * ISBN-13 regex.
+ */
+const ISBN_13_REGEX = /^\d{13}$/u;
+
+/**
  * Creates an [ISBN](https://en.wikipedia.org/wiki/ISBN) action.
  *
- * @returns an ISBN action.
+ * @returns An ISBN action.
  */
 export function isbn<TInput extends string>(): IsbnAction<TInput, undefined>;
 
@@ -72,7 +83,7 @@ export function isbn<TInput extends string>(): IsbnAction<TInput, undefined>;
  *
  * @param message The error message.
  *
- * @returns an ISBN action.
+ * @returns An ISBN action.
  */
 export function isbn<
   TInput extends string,
@@ -85,18 +96,16 @@ export function isbn(
 ): IsbnAction<string, ErrorMessage<IsbnIssue<string>> | undefined> {
   return {
     kind: 'validation',
-    type: 'ISBN',
+    type: 'isbn',
     reference: isbn,
     async: false,
     expects: null,
     requirement(input) {
-      const replacedInput = input.replaceAll('-', '');
-      const isbn10Regex = /^\d{9}[\dX]$/u;
-      const isbn13Regex = /^\d{13}$/u;
-      if (isbn10Regex.test(replacedInput)) {
-        return validateISBN10(replacedInput);
-      } else if (isbn13Regex.test(replacedInput)) {
-        return validateISBN13(replacedInput);
+      const replacedInput = input.replace(/[- ]/gu, '');
+      if (ISBN_10_REGEX.test(replacedInput)) {
+        return _isIsbn10(replacedInput);
+      } else if (ISBN_13_REGEX.test(replacedInput)) {
+        return _isIsbn13(replacedInput);
       }
       return false;
     },
@@ -108,40 +117,4 @@ export function isbn(
       return dataset;
     },
   };
-}
-
-/**
- * [Validates an ISBN-10](https://en.wikipedia.org/wiki/ISBN#ISBN-10_check_digits).
- *
- * @param input The input value.
- *
- * @returns `true` if the input is a valid ISBN-10, `false` otherwise.
- */
-function validateISBN10(input: string): boolean {
-  const digits = input.split('').map((c) => (c === 'X' ? 10 : parseInt(c)));
-  let sum = 0;
-  for (let i = 0; i < 9; i++) {
-    sum += digits[i] * (10 - i);
-  }
-  const mod = sum % 11;
-  const checkDigit = mod === 0 ? 0 : 11 - mod;
-  return checkDigit === digits[9];
-}
-
-/**
- * [Validates an ISBN-13](https://en.wikipedia.org/wiki/ISBN#ISBN-13_check_digit_calculation).
- *
- * @param input The input value.
- *
- * @returns `true` if the input is a valid ISBN-13, `false` otherwise.
- */
-function validateISBN13(input: string): boolean {
-  const digits = input.split('').map((c) => parseInt(c));
-  let sum = 0;
-  for (let i = 0; i < 12; i++) {
-    sum += digits[i] * (i % 2 === 0 ? 1 : 3);
-  }
-  const mod = sum % 10;
-  const checkDigit = mod === 0 ? 0 : 10 - mod;
-  return checkDigit === digits[12];
 }
