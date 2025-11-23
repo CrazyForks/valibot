@@ -179,6 +179,24 @@ describe('convertAction', () => {
     ).toStrictEqual({
       examples: ['foo', 'bar'],
     });
+    expect(
+      convertAction(
+        { examples: ['baz'] },
+        v.examples(['foo', 'bar']),
+        undefined
+      )
+    ).toStrictEqual({
+      examples: ['baz', 'foo', 'bar'],
+    });
+  });
+
+  test('should merge examples from multiple actions', () => {
+    const jsonSchema = {};
+    convertAction(jsonSchema, v.examples(['foo']), undefined);
+    convertAction(jsonSchema, v.metadata({ examples: ['bar'] }), undefined);
+    expect(jsonSchema).toStrictEqual({
+      examples: ['foo', 'bar'],
+    });
   });
 
   test('should convert hexadecimal action', () => {
@@ -494,6 +512,17 @@ describe('convertAction', () => {
       title: 'title',
       description: 'description',
       examples: ['example'],
+    });
+    expect(
+      convertAction(
+        { examples: ['existing'] },
+        v.metadata({
+          examples: ['new'],
+        }),
+        undefined
+      )
+    ).toStrictEqual({
+      examples: ['existing', 'new'],
     });
   });
 
