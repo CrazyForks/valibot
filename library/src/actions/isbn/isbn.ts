@@ -61,18 +61,18 @@ export interface IsbnAction<
 }
 
 /**
- * Creates An [ISBN](https://en.wikipedia.org/wiki/ISBN) validation action.
+ * Creates an [ISBN](https://en.wikipedia.org/wiki/ISBN) validation action.
  *
- * @returns An ISBN validation action.
+ * @returns an ISBN validation action.
  */
 export function isbn<TInput extends string>(): IsbnAction<TInput, undefined>;
 
 /**
- * Creates An [ISBN](https://en.wikipedia.org/wiki/ISBN) validation action.
+ * Creates an [ISBN](https://en.wikipedia.org/wiki/ISBN) validation action.
  *
  * @param message The error message.
  *
- * @returns An ISBN validation action.
+ * @returns an ISBN validation action.
  */
 export function isbn<
   TInput extends string,
