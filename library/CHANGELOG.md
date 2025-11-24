@@ -10,6 +10,7 @@ All notable changes to the library will be documented in this file.
 - Add `isbn` validation action to validate ISBN-10 and ISBN-13 strings (pull request #1097)
 - Add exports for `RawCheckAddIssue`, `RawCheckContext`, `RawCheckIssueInfo`, `RawTransformAddIssue`, `RawTransformContext` and `RawTransformIssueInfo` types for better developer experience with `rawCheck` and `rawTransform` actions (pull request #1359)
 - Change build step to tsdown
+- Fix ReDoS vulnerability in `EMOJI_REGEX` used by `emoji` action
 
 ## v1.1.0 (May 06, 2025)
 
