@@ -5,6 +5,7 @@ All notable changes to the library will be documented in this file.
 ## vX.X.X (Month DD, YYYY)
 
 - Add support for `examples` action
+- Add support for `integer` when used with `minValue` and `maxValue` actions (pull request #1367)
 - Fix conversion of `exactOptional` object properties (pull request #1220)
 - Fix conversion of `variant` to use `oneOf` instead of `anyOf` (pull request #1193)
 
