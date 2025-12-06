@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
 import { execSync } from 'child_process';
+import { createRequire } from 'module';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const transformPath = path.join(__dirname, 'dist', 'index.mjs');
-const jscodeshift = path.join(__dirname, 'node_modules', '.bin', 'jscodeshift');
+const require = createRequire(import.meta.url);
+const jscodeshiftBin = require.resolve('jscodeshift/bin/jscodeshift.js');
 
 const args = process.argv.slice(2);
 const hasParserArg = args.some(
@@ -37,7 +39,7 @@ Common jscodeshift options:
   --dry         Run without making changes
   --print       Print output
   --verbose=2   Increase verbosity
-  --parser=ts   Specify parser (default: babel)
+  --parser=ts   Specify parser (default: ts)
 
 For all options, see: jscodeshift --help
 `);
@@ -45,7 +47,7 @@ For all options, see: jscodeshift --help
 }
 
 try {
-  const command = `"${jscodeshift}" -t "${transformPath}" ${finalArgs.join(' ')}`;
+  const command = `"${process.execPath}" "${jscodeshiftBin}" -t "${transformPath}" ${finalArgs.join(' ')}`;
   execSync(command, { stdio: 'inherit' });
 } catch (error) {
   process.exit(1);
