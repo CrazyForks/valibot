@@ -48,17 +48,21 @@ export function toJsonSchema(
 
   // Convert Valibot schema to JSON Schema
   const jsonSchema = convertSchema(
-    {
-      $schema:
-        config?.target === 'draft-2020-12'
-          ? 'https://json-schema.org/draft/2020-12/schema'
-          : 'http://json-schema.org/draft-07/schema#',
-    },
+    {},
     // @ts-expect-error
     schema,
     config,
     context
   );
+
+  // Add schema URI to JSON Schema, if necessary
+  // Hint: OpenAPI 3.0 has no `$schema` property
+  const target = config?.target ?? 'draft-07';
+  if (target === 'draft-2020-12') {
+    jsonSchema.$schema = 'https://json-schema.org/draft/2020-12/schema';
+  } else if (target === 'draft-07') {
+    jsonSchema.$schema = 'http://json-schema.org/draft-07/schema#';
+  }
 
   // Add definitions to JSON Schema, if necessary
   if (context.referenceMap.size) {

@@ -34,6 +34,7 @@ export interface JsonSchema {
   $comment?: string | undefined;
   $defs?: Record<string, JsonSchemaDefinition> | undefined;
   type?: JsonSchemaTypeName | JsonSchemaTypeName[] | undefined;
+  nullable?: boolean | undefined;
   enum?: JsonSchemaType[] | undefined;
   const?: JsonSchemaType | undefined;
   multipleOf?: number | undefined;

@@ -99,7 +99,7 @@ export interface ConversionConfig {
   /**
    * The target JSON Schema draft version. Defaults to 'draft-07'.
    */
-  readonly target?: 'draft-07' | 'draft-2020-12';
+  readonly target?: 'draft-07' | 'draft-2020-12' | 'openapi-3.0';
   /**
    * Whether to convert the input or output type of the Valibot schema to JSON Schema.
    *
