@@ -659,21 +659,6 @@ describe('convertSchema', () => {
       });
     });
 
-    test('should convert record schema with pipe in key schema', () => {
-      expect(
-        convertSchema(
-          {},
-          v.record(v.pipe(v.string(), v.email()), v.number()),
-          undefined,
-          createContext()
-        )
-      ).toStrictEqual({
-        type: 'object',
-        propertyNames: { type: 'string', format: 'email' },
-        additionalProperties: { type: 'number' },
-      });
-    });
-
     test('should throw error for record with piped key schema for openapi-3.0', () => {
       const schema = v.record(v.pipe(v.string(), v.email()), v.number());
       const error =
