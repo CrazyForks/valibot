@@ -19,10 +19,10 @@ type PreProps = {
  * Pre component for rendering code snippets.
  */
 const Pre = component$<PreProps>((props) => {
-  // Use location and signals
+  // Use element and state signals
   const preElement = useSignal<HTMLPreElement>();
-  const copied = useResetSignal(false);
   const isValibotCode = useSignal(false);
+  const copied = useResetSignal(false);
 
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
