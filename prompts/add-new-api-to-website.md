@@ -271,6 +271,8 @@ Examples:
 2. Check `menu.md` to identify potentially related APIs
 3. For each related API, edit its `index.mdx` and add the new API to the appropriate `<ApiList>`
 
+**Shortcut:** If your new API is very similar to an existing one (e.g., `guard` is similar to `check`), add it everywhere the similar API appears. This ensures consistent coverage across all related docs.
+
 ### Concept Guides
 
 Add the new API to the appropriate guide in `/website/src/routes/guides/`:

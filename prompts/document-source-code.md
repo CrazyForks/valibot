@@ -243,6 +243,16 @@ More complex logic, require more inline comments.
 1. Single function with JSDoc including `@internal`
 2. `// @__NO_SIDE_EFFECTS__` only if pure
 
+## Terminology Consistency
+
+JSDoc descriptions must match the `kind` property if present:
+
+| `kind` Property    | JSDoc Wording                          |
+| ------------------ | -------------------------------------- |
+| `'schema'`         | "Creates a ... schema."                |
+| `'validation'`     | "Creates a ... validation action."     |
+| `'transformation'` | "Creates a ... transformation action." |
+
 ## Quick Reference
 
 ### JSDoc First Lines
