@@ -8,14 +8,15 @@ export const properties: Record<string, PropertyProps> = {
   TConfig: {
     modifier: 'extends',
     type: {
-      type: 'custom',
-      name: 'ParseBooleanConfig',
-      href: '../ParseBooleanConfig/',
-    },
-    default: {
-      type: 'custom',
-      name: 'ParseBooleanConfig',
-      href: '../ParseBooleanConfig/',
+      type: 'union',
+      options: [
+        {
+          type: 'custom',
+          name: 'ParseBooleanConfig',
+          href: '../ParseBooleanConfig/',
+        },
+        'undefined',
+      ],
     },
   },
   TMessage: {
