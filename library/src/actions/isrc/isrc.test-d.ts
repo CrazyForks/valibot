@@ -6,18 +6,18 @@ describe('isrc', () => {
   describe('should return action object', () => {
     test('with undefined message', () => {
       type Action = IsrcAction<string, undefined>;
-      expectTypeOf(isrc()).toEqualTypeOf<Action>();
-      expectTypeOf(isrc(undefined)).toEqualTypeOf<Action>();
+      expectTypeOf(isrc<string>()).toEqualTypeOf<Action>();
+      expectTypeOf(isrc<string, undefined>(undefined)).toEqualTypeOf<Action>();
     });
 
     test('with string message', () => {
-      expectTypeOf(isrc('message')).toEqualTypeOf<
+      expectTypeOf(isrc<string, 'message'>('message')).toEqualTypeOf<
         IsrcAction<string, 'message'>
       >();
     });
 
     test('with function message', () => {
-      expectTypeOf(isrc(() => 'message')).toEqualTypeOf<
+      expectTypeOf(isrc<string, () => string>(() => 'message')).toEqualTypeOf<
         IsrcAction<string, () => string>
       >();
     });

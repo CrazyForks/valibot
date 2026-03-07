@@ -131,16 +131,16 @@ describe('isrc', () => {
       ]);
     });
 
-    test('for invalid digit count', () => {
+    test('for invalid fragment length', () => {
       expectActionIssue(action, baseIssue, [
-        'D-U67-17-03268', // missing A digit
-        'DEU-U67-17-03268', // extra A digit
-        'DE-U6-17-03268', // missing B digit
-        'DE-U67x-17-03268', // extra B digit
-        'DE-U67-1-03268', // missing C digit
-        'DE-U67-170-03268', // extra C digit
-        'DE-U67-17-0326', // missing D digit
-        'DE-U67-17-032680', // extra D digit
+        'D-U67-17-03268', // missing country code character
+        'DEU-U67-17-03268', // extra country code character
+        'DE-U6-17-03268', // missing registrant code character
+        'DE-U67x-17-03268', // extra registrant code character
+        'DE-U67-1-03268', // missing year digit
+        'DE-U67-170-03268', // extra year digit
+        'DE-U67-17-0326', // missing designation digit
+        'DE-U67-17-032680', // extra designation digit
       ]);
     });
 
