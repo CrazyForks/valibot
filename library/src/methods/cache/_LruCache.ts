@@ -67,9 +67,6 @@ class _LruCache<TValue> implements Cache<TValue> {
    * @returns The cache key.
    */
   key(input: unknown, config: Config<BaseIssue<unknown>> = {}): string {
-    if (typeof input === 'symbol') {
-      return 'symbol';
-    }
     return `${this.#stringify(input)}|${this.#stringify(config.lang)}|${this.#stringify(
       config.message
     )}|${this.#stringify(config.abortEarly)}|${this.#stringify(
