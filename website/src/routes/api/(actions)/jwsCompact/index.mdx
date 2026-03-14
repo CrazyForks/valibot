@@ -1,6 +1,6 @@
 ---
 title: jwsCompact
-description: Creates a JWS compact validation action for JWT strings.
+description: Creates a validation action for JWS compact strings.
 source: /actions/jwsCompact/jwsCompact.ts
 contributors:
   - yslpn
@@ -30,9 +30,7 @@ const Action = v.jwsCompact<TInput, TMessage>(message);
 
 With `jwsCompact` you can validate that a string matches the three-part compact serialization of a JWS with unpadded Base64URL segments. If the input is not a JWS compact string, you can use `message` to customize the error message.
 
-If you are looking for JWT validation, this action covers JWTs that are represented as signed three-part JWS compact strings.
-
-> This validation action only checks the structural format of a JWS compact string. It does not decode the token, verify the signature, or validate individual claims. Unsecured JWTs using `alg: "none"` are allowed and therefore end with a trailing dot.
+> This validation action only checks the structural format of a JWS compact string. It does not decode the token, verify the signature, or validate individual claims. Empty payload and signature segments are accepted when they appear as valid compact-serialization segments.
 >
 > If you need full JWT validation, signature verification, or claim checks, use a dedicated library such as one from [jwt.io/libraries](https://www.jwt.io/libraries).
 
