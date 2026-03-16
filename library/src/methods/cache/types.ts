@@ -2,6 +2,8 @@ import type { BaseIssue, Config } from '../../types/index.ts';
 
 /**
  * Cache interface type.
+ *
+ * @beta
  */
 export interface Cache<TValue> {
   /**
@@ -27,6 +29,8 @@ export interface Cache<TValue> {
 
 /**
  * Cache config type.
+ *
+ * @beta
  */
 export interface CacheConfig {
   /**

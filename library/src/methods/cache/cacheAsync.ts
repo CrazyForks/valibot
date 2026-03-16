@@ -16,6 +16,8 @@ import type { Cache, CacheConfig } from './types.ts';
 
 /**
  * Schema with cache async type.
+ *
+ * @beta
  */
 export type SchemaWithCacheAsync<
   TSchema extends
@@ -76,6 +78,8 @@ export type SchemaWithCacheAsync<
  * @param schema The schema to cache.
  *
  * @returns The cached schema.
+ *
+ * @beta
  */
 // @ts-expect-error
 export function cacheAsync<
@@ -95,6 +99,8 @@ export function cacheAsync<
  * @param config The cache config.
  *
  * @returns The cached schema.
+ *
+ * @beta
  */
 export function cacheAsync<
   const TSchema extends

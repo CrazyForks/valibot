@@ -11,6 +11,8 @@ import type { Cache, CacheConfig } from './types.ts';
 
 /**
  * Schema with cache type.
+ *
+ * @beta
  */
 export type SchemaWithCache<
   TSchema extends BaseSchema<unknown, unknown, BaseIssue<unknown>>,
@@ -38,6 +40,8 @@ export type SchemaWithCache<
  * @param schema The schema to cache.
  *
  * @returns The cached schema.
+ *
+ * @beta
  */
 export function cache<
   const TSchema extends BaseSchema<unknown, unknown, BaseIssue<unknown>>,
@@ -54,6 +58,8 @@ export function cache<
  * @param config The cache config.
  *
  * @returns The cached schema.
+ *
+ * @beta
  */
 export function cache<
   const TSchema extends BaseSchema<unknown, unknown, BaseIssue<unknown>>,
