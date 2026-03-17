@@ -8222,8 +8222,8 @@
     },
     "./ko": {
       "import": {
-        "types": "./ko/index.d.ts",
-        "default": "./ko/index.js"
+        "types": "./ko/index.d.mts",
+        "default": "./ko/index.mjs"
       },
       "require": {
         "types": "./ko/index.d.cts",
@@ -8232,8 +8232,8 @@
     },
     "./ko/schema": {
       "import": {
-        "types": "./ko/schema.d.ts",
-        "default": "./ko/schema.js"
+        "types": "./ko/schema.d.mts",
+        "default": "./ko/schema.mjs"
       },
       "require": {
         "types": "./ko/schema.d.cts",
@@ -8242,8 +8242,8 @@
     },
     "./ko/base64": {
       "import": {
-        "types": "./ko/base64.d.ts",
-        "default": "./ko/base64.js"
+        "types": "./ko/base64.d.mts",
+        "default": "./ko/base64.mjs"
       },
       "require": {
         "types": "./ko/base64.d.cts",
@@ -8252,8 +8252,8 @@
     },
     "./ko/bic": {
       "import": {
-        "types": "./ko/bic.d.ts",
-        "default": "./ko/bic.js"
+        "types": "./ko/bic.d.mts",
+        "default": "./ko/bic.mjs"
       },
       "require": {
         "types": "./ko/bic.d.cts",
@@ -8262,8 +8262,8 @@
     },
     "./ko/bytes": {
       "import": {
-        "types": "./ko/bytes.d.ts",
-        "default": "./ko/bytes.js"
+        "types": "./ko/bytes.d.mts",
+        "default": "./ko/bytes.mjs"
       },
       "require": {
         "types": "./ko/bytes.d.cts",
@@ -8272,8 +8272,8 @@
     },
     "./ko/check": {
       "import": {
-        "types": "./ko/check.d.ts",
-        "default": "./ko/check.js"
+        "types": "./ko/check.d.mts",
+        "default": "./ko/check.mjs"
       },
       "require": {
         "types": "./ko/check.d.cts",
@@ -8282,8 +8282,8 @@
     },
     "./ko/checkAsync": {
       "import": {
-        "types": "./ko/checkAsync.d.ts",
-        "default": "./ko/checkAsync.js"
+        "types": "./ko/checkAsync.d.mts",
+        "default": "./ko/checkAsync.mjs"
       },
       "require": {
         "types": "./ko/checkAsync.d.cts",
@@ -8292,8 +8292,8 @@
     },
     "./ko/checkItems": {
       "import": {
-        "types": "./ko/checkItems.d.ts",
-        "default": "./ko/checkItems.js"
+        "types": "./ko/checkItems.d.mts",
+        "default": "./ko/checkItems.mjs"
       },
       "require": {
         "types": "./ko/checkItems.d.cts",
@@ -8302,8 +8302,8 @@
     },
     "./ko/checkItemsAsync": {
       "import": {
-        "types": "./ko/checkItemsAsync.d.ts",
-        "default": "./ko/checkItemsAsync.js"
+        "types": "./ko/checkItemsAsync.d.mts",
+        "default": "./ko/checkItemsAsync.mjs"
       },
       "require": {
         "types": "./ko/checkItemsAsync.d.cts",
@@ -8312,8 +8312,8 @@
     },
     "./ko/creditCard": {
       "import": {
-        "types": "./ko/creditCard.d.ts",
-        "default": "./ko/creditCard.js"
+        "types": "./ko/creditCard.d.mts",
+        "default": "./ko/creditCard.mjs"
       },
       "require": {
         "types": "./ko/creditCard.d.cts",
@@ -8322,8 +8322,8 @@
     },
     "./ko/cuid2": {
       "import": {
-        "types": "./ko/cuid2.d.ts",
-        "default": "./ko/cuid2.js"
+        "types": "./ko/cuid2.d.mts",
+        "default": "./ko/cuid2.mjs"
       },
       "require": {
         "types": "./ko/cuid2.d.cts",
@@ -8332,8 +8332,8 @@
     },
     "./ko/decimal": {
       "import": {
-        "types": "./ko/decimal.d.ts",
-        "default": "./ko/decimal.js"
+        "types": "./ko/decimal.d.mts",
+        "default": "./ko/decimal.mjs"
       },
       "require": {
         "types": "./ko/decimal.d.cts",
@@ -8342,8 +8342,8 @@
     },
     "./ko/digits": {
       "import": {
-        "types": "./ko/digits.d.ts",
-        "default": "./ko/digits.js"
+        "types": "./ko/digits.d.mts",
+        "default": "./ko/digits.mjs"
       },
       "require": {
         "types": "./ko/digits.d.cts",
@@ -8352,8 +8352,8 @@
     },
     "./ko/email": {
       "import": {
-        "types": "./ko/email.d.ts",
-        "default": "./ko/email.js"
+        "types": "./ko/email.d.mts",
+        "default": "./ko/email.mjs"
       },
       "require": {
         "types": "./ko/email.d.cts",
@@ -8362,8 +8362,8 @@
     },
     "./ko/emoji": {
       "import": {
-        "types": "./ko/emoji.d.ts",
-        "default": "./ko/emoji.js"
+        "types": "./ko/emoji.d.mts",
+        "default": "./ko/emoji.mjs"
       },
       "require": {
         "types": "./ko/emoji.d.cts",
@@ -8372,8 +8372,8 @@
     },
     "./ko/empty": {
       "import": {
-        "types": "./ko/empty.d.ts",
-        "default": "./ko/empty.js"
+        "types": "./ko/empty.d.mts",
+        "default": "./ko/empty.mjs"
       },
       "require": {
         "types": "./ko/empty.d.cts",
@@ -8382,8 +8382,8 @@
     },
     "./ko/endsWith": {
       "import": {
-        "types": "./ko/endsWith.d.ts",
-        "default": "./ko/endsWith.js"
+        "types": "./ko/endsWith.d.mts",
+        "default": "./ko/endsWith.mjs"
       },
       "require": {
         "types": "./ko/endsWith.d.cts",
@@ -8392,8 +8392,8 @@
     },
     "./ko/everyItem": {
       "import": {
-        "types": "./ko/everyItem.d.ts",
-        "default": "./ko/everyItem.js"
+        "types": "./ko/everyItem.d.mts",
+        "default": "./ko/everyItem.mjs"
       },
       "require": {
         "types": "./ko/everyItem.d.cts",
@@ -8402,8 +8402,8 @@
     },
     "./ko/excludes": {
       "import": {
-        "types": "./ko/excludes.d.ts",
-        "default": "./ko/excludes.js"
+        "types": "./ko/excludes.d.mts",
+        "default": "./ko/excludes.mjs"
       },
       "require": {
         "types": "./ko/excludes.d.cts",
@@ -8412,8 +8412,8 @@
     },
     "./ko/finite": {
       "import": {
-        "types": "./ko/finite.d.ts",
-        "default": "./ko/finite.js"
+        "types": "./ko/finite.d.mts",
+        "default": "./ko/finite.mjs"
       },
       "require": {
         "types": "./ko/finite.d.cts",
@@ -8422,8 +8422,8 @@
     },
     "./ko/graphemes": {
       "import": {
-        "types": "./ko/graphemes.d.ts",
-        "default": "./ko/graphemes.js"
+        "types": "./ko/graphemes.d.mts",
+        "default": "./ko/graphemes.mjs"
       },
       "require": {
         "types": "./ko/graphemes.d.cts",
@@ -8432,8 +8432,8 @@
     },
     "./ko/hash": {
       "import": {
-        "types": "./ko/hash.d.ts",
-        "default": "./ko/hash.js"
+        "types": "./ko/hash.d.mts",
+        "default": "./ko/hash.mjs"
       },
       "require": {
         "types": "./ko/hash.d.cts",
@@ -8442,8 +8442,8 @@
     },
     "./ko/hexColor": {
       "import": {
-        "types": "./ko/hexColor.d.ts",
-        "default": "./ko/hexColor.js"
+        "types": "./ko/hexColor.d.mts",
+        "default": "./ko/hexColor.mjs"
       },
       "require": {
         "types": "./ko/hexColor.d.cts",
@@ -8452,8 +8452,8 @@
     },
     "./ko/hexadecimal": {
       "import": {
-        "types": "./ko/hexadecimal.d.ts",
-        "default": "./ko/hexadecimal.js"
+        "types": "./ko/hexadecimal.d.mts",
+        "default": "./ko/hexadecimal.mjs"
       },
       "require": {
         "types": "./ko/hexadecimal.d.cts",
@@ -8462,8 +8462,8 @@
     },
     "./ko/imei": {
       "import": {
-        "types": "./ko/imei.d.ts",
-        "default": "./ko/imei.js"
+        "types": "./ko/imei.d.mts",
+        "default": "./ko/imei.mjs"
       },
       "require": {
         "types": "./ko/imei.d.cts",
@@ -8472,8 +8472,8 @@
     },
     "./ko/includes": {
       "import": {
-        "types": "./ko/includes.d.ts",
-        "default": "./ko/includes.js"
+        "types": "./ko/includes.d.mts",
+        "default": "./ko/includes.mjs"
       },
       "require": {
         "types": "./ko/includes.d.cts",
@@ -8482,8 +8482,8 @@
     },
     "./ko/integer": {
       "import": {
-        "types": "./ko/integer.d.ts",
-        "default": "./ko/integer.js"
+        "types": "./ko/integer.d.mts",
+        "default": "./ko/integer.mjs"
       },
       "require": {
         "types": "./ko/integer.d.cts",
@@ -8492,8 +8492,8 @@
     },
     "./ko/ip": {
       "import": {
-        "types": "./ko/ip.d.ts",
-        "default": "./ko/ip.js"
+        "types": "./ko/ip.d.mts",
+        "default": "./ko/ip.mjs"
       },
       "require": {
         "types": "./ko/ip.d.cts",
@@ -8502,8 +8502,8 @@
     },
     "./ko/ipv4": {
       "import": {
-        "types": "./ko/ipv4.d.ts",
-        "default": "./ko/ipv4.js"
+        "types": "./ko/ipv4.d.mts",
+        "default": "./ko/ipv4.mjs"
       },
       "require": {
         "types": "./ko/ipv4.d.cts",
@@ -8512,8 +8512,8 @@
     },
     "./ko/ipv6": {
       "import": {
-        "types": "./ko/ipv6.d.ts",
-        "default": "./ko/ipv6.js"
+        "types": "./ko/ipv6.d.mts",
+        "default": "./ko/ipv6.mjs"
       },
       "require": {
         "types": "./ko/ipv6.d.cts",
@@ -8522,8 +8522,8 @@
     },
     "./ko/isoDate": {
       "import": {
-        "types": "./ko/isoDate.d.ts",
-        "default": "./ko/isoDate.js"
+        "types": "./ko/isoDate.d.mts",
+        "default": "./ko/isoDate.mjs"
       },
       "require": {
         "types": "./ko/isoDate.d.cts",
@@ -8532,8 +8532,8 @@
     },
     "./ko/isoDateTime": {
       "import": {
-        "types": "./ko/isoDateTime.d.ts",
-        "default": "./ko/isoDateTime.js"
+        "types": "./ko/isoDateTime.d.mts",
+        "default": "./ko/isoDateTime.mjs"
       },
       "require": {
         "types": "./ko/isoDateTime.d.cts",
@@ -8542,8 +8542,8 @@
     },
     "./ko/isoTime": {
       "import": {
-        "types": "./ko/isoTime.d.ts",
-        "default": "./ko/isoTime.js"
+        "types": "./ko/isoTime.d.mts",
+        "default": "./ko/isoTime.mjs"
       },
       "require": {
         "types": "./ko/isoTime.d.cts",
@@ -8552,8 +8552,8 @@
     },
     "./ko/isoTimeSecond": {
       "import": {
-        "types": "./ko/isoTimeSecond.d.ts",
-        "default": "./ko/isoTimeSecond.js"
+        "types": "./ko/isoTimeSecond.d.mts",
+        "default": "./ko/isoTimeSecond.mjs"
       },
       "require": {
         "types": "./ko/isoTimeSecond.d.cts",
@@ -8562,8 +8562,8 @@
     },
     "./ko/isoTimestamp": {
       "import": {
-        "types": "./ko/isoTimestamp.d.ts",
-        "default": "./ko/isoTimestamp.js"
+        "types": "./ko/isoTimestamp.d.mts",
+        "default": "./ko/isoTimestamp.mjs"
       },
       "require": {
         "types": "./ko/isoTimestamp.d.cts",
@@ -8572,8 +8572,8 @@
     },
     "./ko/isoWeek": {
       "import": {
-        "types": "./ko/isoWeek.d.ts",
-        "default": "./ko/isoWeek.js"
+        "types": "./ko/isoWeek.d.mts",
+        "default": "./ko/isoWeek.mjs"
       },
       "require": {
         "types": "./ko/isoWeek.d.cts",
@@ -8582,8 +8582,8 @@
     },
     "./ko/length": {
       "import": {
-        "types": "./ko/length.d.ts",
-        "default": "./ko/length.js"
+        "types": "./ko/length.d.mts",
+        "default": "./ko/length.mjs"
       },
       "require": {
         "types": "./ko/length.d.cts",
@@ -8592,8 +8592,8 @@
     },
     "./ko/mac": {
       "import": {
-        "types": "./ko/mac.d.ts",
-        "default": "./ko/mac.js"
+        "types": "./ko/mac.d.mts",
+        "default": "./ko/mac.mjs"
       },
       "require": {
         "types": "./ko/mac.d.cts",
@@ -8602,8 +8602,8 @@
     },
     "./ko/mac48": {
       "import": {
-        "types": "./ko/mac48.d.ts",
-        "default": "./ko/mac48.js"
+        "types": "./ko/mac48.d.mts",
+        "default": "./ko/mac48.mjs"
       },
       "require": {
         "types": "./ko/mac48.d.cts",
@@ -8612,8 +8612,8 @@
     },
     "./ko/mac64": {
       "import": {
-        "types": "./ko/mac64.d.ts",
-        "default": "./ko/mac64.js"
+        "types": "./ko/mac64.d.mts",
+        "default": "./ko/mac64.mjs"
       },
       "require": {
         "types": "./ko/mac64.d.cts",
@@ -8622,8 +8622,8 @@
     },
     "./ko/maxBytes": {
       "import": {
-        "types": "./ko/maxBytes.d.ts",
-        "default": "./ko/maxBytes.js"
+        "types": "./ko/maxBytes.d.mts",
+        "default": "./ko/maxBytes.mjs"
       },
       "require": {
         "types": "./ko/maxBytes.d.cts",
@@ -8632,8 +8632,8 @@
     },
     "./ko/maxGraphemes": {
       "import": {
-        "types": "./ko/maxGraphemes.d.ts",
-        "default": "./ko/maxGraphemes.js"
+        "types": "./ko/maxGraphemes.d.mts",
+        "default": "./ko/maxGraphemes.mjs"
       },
       "require": {
         "types": "./ko/maxGraphemes.d.cts",
@@ -8642,8 +8642,8 @@
     },
     "./ko/maxLength": {
       "import": {
-        "types": "./ko/maxLength.d.ts",
-        "default": "./ko/maxLength.js"
+        "types": "./ko/maxLength.d.mts",
+        "default": "./ko/maxLength.mjs"
       },
       "require": {
         "types": "./ko/maxLength.d.cts",
@@ -8652,8 +8652,8 @@
     },
     "./ko/maxSize": {
       "import": {
-        "types": "./ko/maxSize.d.ts",
-        "default": "./ko/maxSize.js"
+        "types": "./ko/maxSize.d.mts",
+        "default": "./ko/maxSize.mjs"
       },
       "require": {
         "types": "./ko/maxSize.d.cts",
@@ -8662,8 +8662,8 @@
     },
     "./ko/maxValue": {
       "import": {
-        "types": "./ko/maxValue.d.ts",
-        "default": "./ko/maxValue.js"
+        "types": "./ko/maxValue.d.mts",
+        "default": "./ko/maxValue.mjs"
       },
       "require": {
         "types": "./ko/maxValue.d.cts",
@@ -8672,8 +8672,8 @@
     },
     "./ko/maxWords": {
       "import": {
-        "types": "./ko/maxWords.d.ts",
-        "default": "./ko/maxWords.js"
+        "types": "./ko/maxWords.d.mts",
+        "default": "./ko/maxWords.mjs"
       },
       "require": {
         "types": "./ko/maxWords.d.cts",
@@ -8682,8 +8682,8 @@
     },
     "./ko/mimeType": {
       "import": {
-        "types": "./ko/mimeType.d.ts",
-        "default": "./ko/mimeType.js"
+        "types": "./ko/mimeType.d.mts",
+        "default": "./ko/mimeType.mjs"
       },
       "require": {
         "types": "./ko/mimeType.d.cts",
@@ -8692,8 +8692,8 @@
     },
     "./ko/minBytes": {
       "import": {
-        "types": "./ko/minBytes.d.ts",
-        "default": "./ko/minBytes.js"
+        "types": "./ko/minBytes.d.mts",
+        "default": "./ko/minBytes.mjs"
       },
       "require": {
         "types": "./ko/minBytes.d.cts",
@@ -8702,8 +8702,8 @@
     },
     "./ko/minGraphemes": {
       "import": {
-        "types": "./ko/minGraphemes.d.ts",
-        "default": "./ko/minGraphemes.js"
+        "types": "./ko/minGraphemes.d.mts",
+        "default": "./ko/minGraphemes.mjs"
       },
       "require": {
         "types": "./ko/minGraphemes.d.cts",
@@ -8712,8 +8712,8 @@
     },
     "./ko/minLength": {
       "import": {
-        "types": "./ko/minLength.d.ts",
-        "default": "./ko/minLength.js"
+        "types": "./ko/minLength.d.mts",
+        "default": "./ko/minLength.mjs"
       },
       "require": {
         "types": "./ko/minLength.d.cts",
@@ -8722,8 +8722,8 @@
     },
     "./ko/minSize": {
       "import": {
-        "types": "./ko/minSize.d.ts",
-        "default": "./ko/minSize.js"
+        "types": "./ko/minSize.d.mts",
+        "default": "./ko/minSize.mjs"
       },
       "require": {
         "types": "./ko/minSize.d.cts",
@@ -8732,8 +8732,8 @@
     },
     "./ko/minValue": {
       "import": {
-        "types": "./ko/minValue.d.ts",
-        "default": "./ko/minValue.js"
+        "types": "./ko/minValue.d.mts",
+        "default": "./ko/minValue.mjs"
       },
       "require": {
         "types": "./ko/minValue.d.cts",
@@ -8742,8 +8742,8 @@
     },
     "./ko/minWords": {
       "import": {
-        "types": "./ko/minWords.d.ts",
-        "default": "./ko/minWords.js"
+        "types": "./ko/minWords.d.mts",
+        "default": "./ko/minWords.mjs"
       },
       "require": {
         "types": "./ko/minWords.d.cts",
@@ -8752,8 +8752,8 @@
     },
     "./ko/multipleOf": {
       "import": {
-        "types": "./ko/multipleOf.d.ts",
-        "default": "./ko/multipleOf.js"
+        "types": "./ko/multipleOf.d.mts",
+        "default": "./ko/multipleOf.mjs"
       },
       "require": {
         "types": "./ko/multipleOf.d.cts",
@@ -8762,8 +8762,8 @@
     },
     "./ko/nanoid": {
       "import": {
-        "types": "./ko/nanoid.d.ts",
-        "default": "./ko/nanoid.js"
+        "types": "./ko/nanoid.d.mts",
+        "default": "./ko/nanoid.mjs"
       },
       "require": {
         "types": "./ko/nanoid.d.cts",
@@ -8772,8 +8772,8 @@
     },
     "./ko/nonEmpty": {
       "import": {
-        "types": "./ko/nonEmpty.d.ts",
-        "default": "./ko/nonEmpty.js"
+        "types": "./ko/nonEmpty.d.mts",
+        "default": "./ko/nonEmpty.mjs"
       },
       "require": {
         "types": "./ko/nonEmpty.d.cts",
@@ -8782,8 +8782,8 @@
     },
     "./ko/notBytes": {
       "import": {
-        "types": "./ko/notBytes.d.ts",
-        "default": "./ko/notBytes.js"
+        "types": "./ko/notBytes.d.mts",
+        "default": "./ko/notBytes.mjs"
       },
       "require": {
         "types": "./ko/notBytes.d.cts",
@@ -8792,8 +8792,8 @@
     },
     "./ko/notGraphemes": {
       "import": {
-        "types": "./ko/notGraphemes.d.ts",
-        "default": "./ko/notGraphemes.js"
+        "types": "./ko/notGraphemes.d.mts",
+        "default": "./ko/notGraphemes.mjs"
       },
       "require": {
         "types": "./ko/notGraphemes.d.cts",
@@ -8802,8 +8802,8 @@
     },
     "./ko/notLength": {
       "import": {
-        "types": "./ko/notLength.d.ts",
-        "default": "./ko/notLength.js"
+        "types": "./ko/notLength.d.mts",
+        "default": "./ko/notLength.mjs"
       },
       "require": {
         "types": "./ko/notLength.d.cts",
@@ -8812,8 +8812,8 @@
     },
     "./ko/notSize": {
       "import": {
-        "types": "./ko/notSize.d.ts",
-        "default": "./ko/notSize.js"
+        "types": "./ko/notSize.d.mts",
+        "default": "./ko/notSize.mjs"
       },
       "require": {
         "types": "./ko/notSize.d.cts",
@@ -8822,8 +8822,8 @@
     },
     "./ko/notValue": {
       "import": {
-        "types": "./ko/notValue.d.ts",
-        "default": "./ko/notValue.js"
+        "types": "./ko/notValue.d.mts",
+        "default": "./ko/notValue.mjs"
       },
       "require": {
         "types": "./ko/notValue.d.cts",
@@ -8832,8 +8832,8 @@
     },
     "./ko/notWords": {
       "import": {
-        "types": "./ko/notWords.d.ts",
-        "default": "./ko/notWords.js"
+        "types": "./ko/notWords.d.mts",
+        "default": "./ko/notWords.mjs"
       },
       "require": {
         "types": "./ko/notWords.d.cts",
@@ -8842,8 +8842,8 @@
     },
     "./ko/octal": {
       "import": {
-        "types": "./ko/octal.d.ts",
-        "default": "./ko/octal.js"
+        "types": "./ko/octal.d.mts",
+        "default": "./ko/octal.mjs"
       },
       "require": {
         "types": "./ko/octal.d.cts",
@@ -8852,8 +8852,8 @@
     },
     "./ko/partialCheck": {
       "import": {
-        "types": "./ko/partialCheck.d.ts",
-        "default": "./ko/partialCheck.js"
+        "types": "./ko/partialCheck.d.mts",
+        "default": "./ko/partialCheck.mjs"
       },
       "require": {
         "types": "./ko/partialCheck.d.cts",
@@ -8862,8 +8862,8 @@
     },
     "./ko/regex": {
       "import": {
-        "types": "./ko/regex.d.ts",
-        "default": "./ko/regex.js"
+        "types": "./ko/regex.d.mts",
+        "default": "./ko/regex.mjs"
       },
       "require": {
         "types": "./ko/regex.d.cts",
@@ -8872,8 +8872,8 @@
     },
     "./ko/safeInteger": {
       "import": {
-        "types": "./ko/safeInteger.d.ts",
-        "default": "./ko/safeInteger.js"
+        "types": "./ko/safeInteger.d.mts",
+        "default": "./ko/safeInteger.mjs"
       },
       "require": {
         "types": "./ko/safeInteger.d.cts",
@@ -8882,8 +8882,8 @@
     },
     "./ko/size": {
       "import": {
-        "types": "./ko/size.d.ts",
-        "default": "./ko/size.js"
+        "types": "./ko/size.d.mts",
+        "default": "./ko/size.mjs"
       },
       "require": {
         "types": "./ko/size.d.cts",
@@ -8892,8 +8892,8 @@
     },
     "./ko/someItem": {
       "import": {
-        "types": "./ko/someItem.d.ts",
-        "default": "./ko/someItem.js"
+        "types": "./ko/someItem.d.mts",
+        "default": "./ko/someItem.mjs"
       },
       "require": {
         "types": "./ko/someItem.d.cts",
@@ -8902,8 +8902,8 @@
     },
     "./ko/startsWith": {
       "import": {
-        "types": "./ko/startsWith.d.ts",
-        "default": "./ko/startsWith.js"
+        "types": "./ko/startsWith.d.mts",
+        "default": "./ko/startsWith.mjs"
       },
       "require": {
         "types": "./ko/startsWith.d.cts",
@@ -8912,8 +8912,8 @@
     },
     "./ko/ulid": {
       "import": {
-        "types": "./ko/ulid.d.ts",
-        "default": "./ko/ulid.js"
+        "types": "./ko/ulid.d.mts",
+        "default": "./ko/ulid.mjs"
       },
       "require": {
         "types": "./ko/ulid.d.cts",
@@ -8922,8 +8922,8 @@
     },
     "./ko/url": {
       "import": {
-        "types": "./ko/url.d.ts",
-        "default": "./ko/url.js"
+        "types": "./ko/url.d.mts",
+        "default": "./ko/url.mjs"
       },
       "require": {
         "types": "./ko/url.d.cts",
@@ -8932,8 +8932,8 @@
     },
     "./ko/uuid": {
       "import": {
-        "types": "./ko/uuid.d.ts",
-        "default": "./ko/uuid.js"
+        "types": "./ko/uuid.d.mts",
+        "default": "./ko/uuid.mjs"
       },
       "require": {
         "types": "./ko/uuid.d.cts",
@@ -8942,8 +8942,8 @@
     },
     "./ko/value": {
       "import": {
-        "types": "./ko/value.d.ts",
-        "default": "./ko/value.js"
+        "types": "./ko/value.d.mts",
+        "default": "./ko/value.mjs"
       },
       "require": {
         "types": "./ko/value.d.cts",
@@ -8952,8 +8952,8 @@
     },
     "./ko/words": {
       "import": {
-        "types": "./ko/words.d.ts",
-        "default": "./ko/words.js"
+        "types": "./ko/words.d.mts",
+        "default": "./ko/words.mjs"
       },
       "require": {
         "types": "./ko/words.d.cts",
