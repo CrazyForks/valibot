@@ -2,6 +2,12 @@
 
 All notable changes to the library will be documented in this file.
 
+## vX.X.X (Month DD, YYYY)
+
+- Add new and missing actions to translations (pull request #1306)
+- Change Valibot peer dependency to `^1.3.0`
+- Fix ISO 639-1 code for Korean (`ko`) (pull request #1306)
+
 ## v1.0.0 (March 19, 2025)
 
 - Add new and missing actions to translations
@@ -13,7 +19,7 @@ All notable changes to the library will be documented in this file.
 
 ## v0.17.0 (July 26, 2024)
 
-- Add Indonesia (id) translations (pull request #683)
+- Add Indonesian (id) translations (pull request #683)
 
 ## v0.16.0 (June 19, 2024)
 

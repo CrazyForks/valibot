@@ -1,6 +1,5 @@
-import type { JSONSchema7 } from 'json-schema';
 import type * as v from 'valibot';
-import type { ConversionConfig } from '../../type.ts';
+import type { ConversionConfig, JsonSchema } from '../../types/index.ts';
 import { addError, handleError } from '../../utils/index.ts';
 
 /**
@@ -13,6 +12,7 @@ type Action =
   | v.DecimalAction<string, v.ErrorMessage<v.DecimalIssue<string>> | undefined>
   | v.DescriptionAction<unknown, string>
   | v.DigitsAction<string, v.ErrorMessage<v.DigitsIssue<string>> | undefined>
+  | v.DomainAction<string, v.ErrorMessage<v.DomainIssue<string>> | undefined>
   | v.EmailAction<string, v.ErrorMessage<v.EmailIssue<string>> | undefined>
   | v.EmojiAction<string, v.ErrorMessage<v.EmojiIssue<string>> | undefined>
   | v.EmptyAction<
@@ -24,6 +24,7 @@ type Action =
       number,
       v.ErrorMessage<v.EntriesIssue<v.EntriesInput, number>> | undefined
     >
+  | v.ExamplesAction<unknown, readonly unknown[]>
   | v.HexadecimalAction<
       string,
       v.ErrorMessage<v.HexadecimalIssue<string>> | undefined
@@ -44,6 +45,10 @@ type Action =
   | v.IsoTimestampAction<
       string,
       v.ErrorMessage<v.IsoTimestampIssue<string>> | undefined
+    >
+  | v.JwsCompactAction<
+      string,
+      v.ErrorMessage<v.JwsCompactIssue<string>> | undefined
     >
   | v.LengthAction<
       v.LengthInput,
@@ -113,10 +118,10 @@ type Action =
  * @returns The converted JSON Schema.
  */
 export function convertAction(
-  jsonSchema: JSONSchema7,
+  jsonSchema: JsonSchema,
   valibotAction: Action,
   config: ConversionConfig | undefined
-): JSONSchema7 {
+): JsonSchema {
   // Ignore action if specified in configuration
   if (config?.ignoreActions?.includes(valibotAction.type)) {
     return jsonSchema;
@@ -136,6 +141,7 @@ export function convertAction(
     case 'cuid2':
     case 'decimal':
     case 'digits':
+    case 'domain':
     case 'emoji':
     case 'hexadecimal':
     case 'hex_color':
@@ -177,6 +183,20 @@ export function convertAction(
       break;
     }
 
+    case 'examples': {
+      if (Array.isArray(jsonSchema.examples)) {
+        // @ts-expect-error
+        jsonSchema.examples = [
+          ...jsonSchema.examples,
+          ...valibotAction.examples,
+        ];
+      } else {
+        // @ts-expect-error
+        jsonSchema.examples = valibotAction.examples;
+      }
+      break;
+    }
+
     case 'integer': {
       jsonSchema.type = 'integer';
       break;
@@ -205,6 +225,11 @@ export function convertAction(
 
     case 'iso_time': {
       jsonSchema.format = 'time';
+      break;
+    }
+
+    case 'jws_compact': {
+      jsonSchema.pattern = valibotAction.requirement.source;
       break;
     }
 
@@ -246,7 +271,7 @@ export function convertAction(
     }
 
     case 'max_value': {
-      if (jsonSchema.type !== 'number') {
+      if (jsonSchema.type !== 'number' && jsonSchema.type !== 'integer') {
         errors = addError(
           errors,
           `The "max_value" action is not supported on type "${jsonSchema.type}".`
@@ -265,7 +290,14 @@ export function convertAction(
         jsonSchema.description = valibotAction.metadata.description;
       }
       if (Array.isArray(valibotAction.metadata.examples)) {
-        jsonSchema.examples = valibotAction.metadata.examples;
+        if (Array.isArray(jsonSchema.examples)) {
+          jsonSchema.examples = [
+            ...jsonSchema.examples,
+            ...valibotAction.metadata.examples,
+          ];
+        } else {
+          jsonSchema.examples = valibotAction.metadata.examples;
+        }
       }
       break;
     }
@@ -291,7 +323,7 @@ export function convertAction(
     }
 
     case 'min_value': {
-      if (jsonSchema.type !== 'number') {
+      if (jsonSchema.type !== 'number' && jsonSchema.type !== 'integer') {
         errors = addError(
           errors,
           `The "min_value" action is not supported on type "${jsonSchema.type}".`
