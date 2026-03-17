@@ -2,11 +2,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import package_ from '../package.json';
 import ar from '../src/ar';
+import az from '../src/az';
 import ca from '../src/ca';
 import cs from '../src/cs';
 import de from '../src/de';
 import es from '../src/es';
 import fa from '../src/fa';
+import fi from '../src/fi';
 import fr from '../src/fr';
 import hu from '../src/hu';
 import id from '../src/id';
@@ -14,6 +16,7 @@ import it from '../src/it';
 import ja from '../src/ja';
 import ko from '../src/ko';
 import kr from '../src/kr';
+import mn from '../src/mn';
 import nb from '../src/nb';
 import nl from '../src/nl';
 import pl from '../src/pl';
@@ -37,11 +40,13 @@ console.time('build');
 // messages of Valibot are already in English
 const languages = [
   ar,
+  az,
   ca,
   cs,
   de,
   es,
   fa,
+  fi,
   fr,
   hu,
   id,
@@ -49,6 +54,7 @@ const languages = [
   ja,
   ko,
   kr,
+  mn,
   nb,
   nl,
   pl,
