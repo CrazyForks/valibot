@@ -49,6 +49,7 @@ const languages = [
   ja,
   ko,
   kr,
+  mn,
   nb,
   nl,
   pl,
@@ -62,7 +63,6 @@ const languages = [
   vi,
   zhCN,
   zhTW,
-  mn,
 ];
 
 // Create root import variables
