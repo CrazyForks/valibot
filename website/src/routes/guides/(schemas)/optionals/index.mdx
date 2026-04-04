@@ -95,7 +95,7 @@ When an object entry uses <Link href="/api/optional/">`optional`</Link>, <Link h
 
 ### Without default values
 
-If no `default_` value is provided, missing object keys are completely ignored and their pipes will **not** be executed. If the key is present with `undefined` (or `null` for `nullish`), the pipe still runs.
+If no `default_` value is provided, missing object keys are completely ignored and their pipes will **not** be executed. If the key is present with `undefined` or `null`, the pipe still runs (but it may return an issue depending on the schema used).
 
 ```ts
 import * as v from 'valibot';
