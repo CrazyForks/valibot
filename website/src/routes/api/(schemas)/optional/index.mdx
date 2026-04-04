@@ -86,24 +86,21 @@ const NumberSchema = v.unwrap(OptionalNumberSchema);
 When using `optional` in a <Link href="../../pipe/">`pipe`</Link>, the pipe actions only execute if a `default_` value is provided or the key is present. This applies to all pipe actions including <Link href="../../transform/">`transform`</Link>, <Link href="../../check/">`check`</Link>, and others.
 
 ```ts
-// ❌ Pipe actions will NOT execute for missing keys - result stays undefined
+// ❌ Pipe actions will NOT execute for missing keys
 const SchemaWithoutDefault = v.object({
   isActive: v.pipe(
     v.optional(v.string()),
     v.transform((value) => value === 'true') // Won't run for missing keys
   ),
-});
+}); // Output type: { isActive?: boolean | undefined }
 
 // ✅ Pipe actions WILL execute for missing keys using the default value
 const SchemaWithDefault = v.object({
   isActive: v.pipe(
     v.optional(v.string(), 'false'), // Default value provided
-    v.transform((value) => value === 'true') // Runs for all cases
+    v.transform((value) => value === 'true') // Runs for missing keys too
   ),
-});
-
-v.parse(SchemaWithoutDefault, {}); // { } - isActive is undefined (isActive?: boolean | undefined)
-v.parse(SchemaWithDefault, {}); // { isActive: false } - transform executed (isActive: boolean)
+}); // Output type: { isActive: boolean }
 ```
 
 ## Related

@@ -34,7 +34,7 @@ const NullishStringSchema = v.nullish(v.string()); // string | null | undefined
 
 ### Use in objects
 
-When used inside of objects, <Link href="/api/optional/">`optional`</Link>, <Link href="/api/exactOptional/">`exactOptional`</Link> and <Link href="/api/nullish/">`nullish`</Link> is a special case, as it also marks the value as optional in TypeScript with a question mark.
+When used inside objects, <Link href="/api/optional/">`optional`</Link>, <Link href="/api/exactOptional/">`exactOptional`</Link>, and <Link href="/api/nullish/">`nullish`</Link> are a special case, as they also mark the key as optional in TypeScript with a question mark.
 
 ```ts
 import * as v from 'valibot';
@@ -91,11 +91,11 @@ const CalculationSchema = v.pipe(
 
 ## Pipe execution behavior
 
-When using <Link href="/api/optional/">`optional`</Link>, <Link href="/api/exactOptional/">`exactOptional`</Link>, or other optional schemas with <Link href="/api/pipe/">`pipe`</Link> containing actions, it's important to understand when the pipe executes:
+When an object entry uses <Link href="/api/optional/">`optional`</Link>, <Link href="/api/exactOptional/">`exactOptional`</Link>, or <Link href="/api/nullish/">`nullish`</Link> inside a <Link href="/api/pipe/">`pipe`</Link>, it is important to understand when the pipe executes.
 
 ### Without default values
 
-If no `default_` value is provided, missing object keys are completely ignored and their pipes will **not** be executed.
+If no `default_` value is provided, missing object keys are completely ignored and their pipes will **not** be executed. This only applies to missing keys. If the key is present with `null` or `undefined`, the pipe still runs.
 
 ```ts
 import * as v from 'valibot';
@@ -103,11 +103,11 @@ import * as v from 'valibot';
 const Schema = v.object({
   value: v.pipe(
     v.optional(v.string()),
-    v.transform((input) => input.toUpperCase()) // Won't run for missing keys
+    v.transform((input) => input.toUpperCase()) // Won't run because the key is missing
   ),
 });
 
-const result = v.parse(Schema, {}); // { } - value is undefined (value?: string | undefined)
+const result = v.parse(Schema, {}); // Output: {}
 ```
 
 ### With default values
@@ -120,11 +120,11 @@ import * as v from 'valibot';
 const Schema = v.object({
   value: v.pipe(
     v.optional(v.string(), 'hello'), // Default value provided
-    v.transform((input) => input.toUpperCase()) // Runs with 'hello' for missing keys
+    v.transform((input) => input.toUpperCase()) // Runs with 'hello' for missing keys too
   ),
 });
 
-const result = v.parse(Schema, {}); // { value: 'HELLO' } - transform executed
+const result = v.parse(Schema, {}); // Output: { value: 'HELLO' }
 ```
 
 This behavior ensures that the output type is consistent and transforms can reliably process values.
